@@ -19,6 +19,26 @@ exercises: 2
 
 ## Introduction
 
+
+
+```r
+library("curl")
+library("cowsay")
+```
+
+```{.error}
+Error in library("cowsay"): there is no package called 'cowsay'
+```
+
+```r
+say("catfact", "cat")
+```
+
+```{.error}
+Error in say("catfact", "cat"): could not find function "say"
+```
+
+
 This is the new Carpentries template. It is written in [RMarkdown][r-markdown],
 which is a variant of Markdown that allows you to render code inside the
 lesson. Please refer to the [lesson
@@ -129,6 +149,7 @@ sessioninfo::session_info()
  package     * version    date       lib source                                      
  assertthat    0.2.1      2019-03-21 [1] CRAN (R 4.1.0)                              
  cli           3.0.1      2021-07-17 [1] CRAN (R 4.1.0)                              
+ curl        * 4.3.2      2021-06-23 [1] CRAN (R 4.1.0)                              
  evaluate      0.14       2019-05-28 [1] CRAN (R 4.1.0)                              
  highr         0.9        2021-04-16 [1] CRAN (R 4.1.0)                              
  knitr         1.33       2021-04-24 [1] CRAN (R 4.1.0)                              
