@@ -20,11 +20,28 @@ exercises: 2
 ## Introduction
 
 
+:::::::: callout
+
+## Non-standard packages!
+
+We can now include non-standard packages in our {sandpaper} sites and have them
+be reproducible! Case in point: [the {cowsay} 
+package](https://cran.r-project.org/package=cowsay) is not one of the imports
+for sandpaper, but I can use it to generate random cat facts for my lesson
+
+### Demo
+
+
+```r
+library("curl")
+library("cowsay")
+say("catfact", "cat")
+```
 
 ```{.output}
 
  -------------- 
-Cats only sweat through their paws and nowhere else on their body 
+Cats are extremely sensitive to vibrations. Cats are said to detect earthquake tremors 10 or 15 minutes before humans can. 
  --------------
     \
       \
@@ -41,6 +58,23 @@ Cats only sweat through their paws and nowhere else on their body
                \_)
   
 ```
+
+### Try it yourself!
+
+To try this out, install the development version of sandpaper with `remotes`:
+
+
+```r
+install.packages("renv")
+remotes::install_github("carpentries/sandpaper@package-management")
+```
+
+Then, clone this repository and run `sandpaper::build_lesson()` inside the 
+repository from your R console. Should this work, the dependencies will 
+automatically install to a library specific to the lesson and the lesson will
+render, regardless if you have {cowsay} previously installed.
+
+:::
 
 
 This is the new Carpentries template. It is written in [RMarkdown][r-markdown],
@@ -172,7 +206,7 @@ sessioninfo::session_info()
  P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/packages/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppMVIx7/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpwDpOlT/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
