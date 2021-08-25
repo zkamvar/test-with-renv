@@ -30,19 +30,19 @@ jobs:
           token: ${{ secrets.SANDPAPER_WORKFLOW }}
 
   bad_token:
-    name: "Alert Bad Token"
+    name: "Invalid/Missing Token"
     runs-on: ubuntu-latest
     needs: check_token
     if: ${{ needs.check_token.outputs.wf != 'true' }}
     steps:
-      - name: "Create a new token"
+      - name: "Instructions to create a new token"
         run: |
           printf "::warning::The SANDPAPER_WORKFLOW token workflow scope is not valid\n"\
-          "You will need to generate a new token by going to"\
-          "https://github.com/settings/tokens/new?scopes=repo,workflow&description=Sandpaperr%%20Token\n"\
-          "Once you have created the token, go to"\
-          "https://github.com/${{ github.repository }}/settings/secrets/actions/SANDPAPER_WORKFLOW"\
-          "to update it"
+          "If you want to have periodic pull request updates, you will need to generate a new token by going to "\
+          "https://github.com/settings/tokens/new?scopes=repo,workflow&description=Sandpaper%%20Token\n"\
+          "Once you have created the token, go to "\
+          "https://github.com/${{ github.repository }}/settings/secrets/actions/SANDPAPER_WORKFLOW "\
+          "to update it."
 
   update_workflow:
     name: "Update Workflow"
