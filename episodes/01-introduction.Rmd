@@ -99,3 +99,8 @@ Cool, right?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+```{r sessioninfo, R.options = list(width = 100)}
+sessioninfo::session_info()
+```
+
+
