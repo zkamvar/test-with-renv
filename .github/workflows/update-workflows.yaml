@@ -39,7 +39,7 @@ jobs:
         run: |
           printf "::warning::The SANDPAPER_WORKFLOW token workflow scope is not valid\n"\
           "You will need to generate a new token by going to"\
-          "https://github.com/settings/tokens/new?scopes=repo,workflow&description=Sandpaper%20Token\n"\
+          "https://github.com/settings/tokens/new?scopes=repo,workflow&description=Sandpaperr%%20Token\n"\
           "Once you have created the token, go to"\
           "https://github.com/${{ github.repository }}/settings/secrets/actions/SANDPAPER_WORKFLOW"\
           "to update it"
