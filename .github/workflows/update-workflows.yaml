@@ -37,12 +37,12 @@ jobs:
     steps:
       - name: "Create a new token"
         run: |
-          echo "::warning::The SANDPAPER_WORKFLOW token workflow scope is not valid"
-          echo "You will need to generate a new token by going to"
-          echo "https://github.com/settings/tokens/new?scopes=repo,workflow&description=Sandpaper%20Token"
-          echo "Once you have created the token, go to"
-          echo "https://github.com/${{ github.repository }}/settings/secrets/actions/SANDPAPER_WORKFLOW"
-          echo "to update it"
+          printf "::warning::The SANDPAPER_WORKFLOW token workflow scope is not valid\n"\
+          "You will need to generate a new token by going to"\
+          "https://github.com/settings/tokens/new?scopes=repo,workflow&description=Sandpaper%20Token\n"\
+          "Once you have created the token, go to"\
+          "https://github.com/${{ github.repository }}/settings/secrets/actions/SANDPAPER_WORKFLOW"\
+          "to update it"
 
   update_workflow:
     name: "Update Workflow"
