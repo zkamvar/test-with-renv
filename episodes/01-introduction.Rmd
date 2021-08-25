@@ -20,7 +20,7 @@ exercises: 2
 ## Introduction
 
 
-```{r wisdom, message = FALSE}
+```{r wisdom, message = FALSE, echo = FALSE}
 library("curl")
 library("cowsay")
 say("catfact", "cat")
