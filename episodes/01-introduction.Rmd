@@ -20,11 +20,38 @@ exercises: 2
 ## Introduction
 
 
-```{r wisdom, message = FALSE, echo = FALSE}
+:::::::: callout
+
+## Non-standard packages!
+
+We can now include non-standard packages in our {sandpaper} sites and have them
+be reproducible! Case in point: [the {cowsay} 
+package](https://cran.r-project.org/package=cowsay) is not one of the imports
+for sandpaper, but I can use it to generate random cat facts for my lesson
+
+### Demo
+
+```{r wisdom, message = FALSE}
 library("curl")
 library("cowsay")
 say("catfact", "cat")
 ```
+
+### Try it yourself!
+
+To try this out, install the development version of sandpaper with `remotes`:
+
+```{r eval = FALSE}
+install.packages("renv")
+remotes::install_github("carpentries/sandpaper@package-management")
+```
+
+Then, clone this repository and run `sandpaper::build_lesson()` inside the 
+repository from your R console. Should this work, the dependencies will 
+automatically install to a library specific to the lesson and the lesson will
+render, regardless if you have {cowsay} previously installed.
+
+:::
 
 
 This is the new Carpentries template. It is written in [RMarkdown][r-markdown],

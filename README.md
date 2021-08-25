@@ -1,3 +1,4 @@
-# test-with-renv
-    
-    This is the lesson repository for test-with-renv
+# Test Lesson for package management
+
+This lesson repository tests that we can use {renv} to deploy lesson websites 
+with arbitrary packages.
