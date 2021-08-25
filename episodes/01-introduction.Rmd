@@ -19,6 +19,14 @@ exercises: 2
 
 ## Introduction
 
+
+```{r wisdom, message = FALSE}
+library("curl")
+library("cowsay")
+say("catfact", "cat")
+```
+
+
 This is the new Carpentries template. It is written in [RMarkdown][r-markdown],
 which is a variant of Markdown that allows you to render code inside the
 lesson. Please refer to the [lesson
