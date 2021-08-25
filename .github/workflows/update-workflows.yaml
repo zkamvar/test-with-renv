@@ -35,7 +35,9 @@ jobs:
     needs: check_token
     if: ${{ needs.check_token.outputs.wf != 'true' }}
     steps:
-      - run: echo "::warning::The SANDPAPER_WORKFLOW token workflow scope is not valid"
+      - run: |
+        echo "${{ needs.check_token.outputs.wf }}"
+        echo "::warning::The SANDPAPER_WORKFLOW token workflow scope is not valid"
 
   update_workflow:
     name: "Update Workflow"
