@@ -35,7 +35,8 @@ jobs:
     needs: check_token
     if: ${{ needs.check_token.outputs.wf != 'true' }}
     steps:
-      - run: |
+      - name: "Create a new token"
+        run: |
           echo "::warning::The SANDPAPER_WORKFLOW token workflow scope is not valid"
           echo "You will need to generate a new token by going to"
           echo "https://github.com/settings/tokens/new?scopes=repo,workflow&description=Sandpaper%20Token"
