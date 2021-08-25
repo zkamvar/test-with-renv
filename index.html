@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="last-modified" content="2021-08-25 17:11:56 +0000">
+<meta http-equiv="last-modified" content="2021-08-25 17:25:43 +0000">
 
 
 
@@ -203,7 +203,10 @@
   <div class="contents col-md-12">
     <div class="section level1 page-header">
       <h1></h1>
-
+<p>This is a test lesson for the package management of {sandpaper}. It is still experimental, but if you would like to try this out, you can use:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;carpentries/sandpaper@package-management&quot;</span>)</span></code></pre></div>
+<p>This will build your old lessons the same way, but when a new lesson is created, it will create a private library for your lesson and a record of what packages are used in the lesson. You can find an example in <a href="episodes/01-introduction.html">the introduction chapter</a>.</p>
     </div>
   </div>
 </div>

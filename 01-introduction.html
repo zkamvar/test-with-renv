@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="last-modified" content="2021-08-25 17:11:56 +0000">
+<meta http-equiv="last-modified" content="2021-08-25 17:25:43 +0000">
 
 
 
@@ -233,9 +233,20 @@
 </div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
+<aside class="callout">
+<div>
+<div id="non-standard-packages" class="section level3">
+<h3>Non-standard packages!</h3>
+<p>We can now include non-standard packages in our {sandpaper} sites and have them be reproducible! Case in point: <a href="https://cran.r-project.org/package=cowsay">the {cowsay} package</a> is not one of the imports for sandpaper, but I can use it to generate random cat facts for my lesson</p>
+</div>
+<div id="demo" class="section level3">
+<h3>Demo</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;curl&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;cowsay&quot;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">say</span>(<span class="st">&quot;catfact&quot;</span>, <span class="st">&quot;cat&quot;</span>)</span></code></pre></div>
 <pre class="output"><code>
  -------------- 
-Cats only sweat through their paws and nowhere else on their body 
+Cats are extremely sensitive to vibrations. Cats are said to detect earthquake tremors 10 or 15 minutes before humans can. 
  --------------
     \
       \
@@ -251,6 +262,16 @@ Cats only sweat through their paws and nowhere else on their body
       jgs  //_// ___/
                \_)
   </code></pre>
+</div>
+<div id="try-it-yourself" class="section level3">
+<h3>Try it yourself!</h3>
+<p>To try this out, install the development version of sandpaper with <code>remotes</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;carpentries/sandpaper@package-management&quot;</span>)</span></code></pre></div>
+<p>Then, clone this repository and run <code>sandpaper::build_lesson()</code> inside the repository from your R console. Should this work, the dependencies will automatically install to a library specific to the lesson and the lesson will render, regardless if you have {cowsay} previously installed.</p>
+</div>
+</div>
+</aside>
 <p>This is the new Carpentries template. It is written in [RMarkdown][r-markdown], which is a variant of Markdown that allows you to render code inside the lesson. Please refer to the <a href="https://carpentries.github.io/lesson-example">lesson example</a> for full documentation.</p>
 <p>What you need to know is that there are three block quotes required for a valid Carpentries lesson template:</p>
 <ol style="list-style-type: decimal">
@@ -263,7 +284,7 @@ Cats only sweat through their paws and nowhere else on their body
 <div id="challenge-1-can-you-do-it" class="section level2">
 <h2>Challenge 1: Can you do it?</h2>
 <p>What is the output of this command?</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;This&quot;</span>, <span class="st">&quot;new&quot;</span>, <span class="st">&quot;template&quot;</span>, <span class="st">&quot;looks&quot;</span>, <span class="st">&quot;good&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;This&quot;</span>, <span class="st">&quot;new&quot;</span>, <span class="st">&quot;template&quot;</span>, <span class="st">&quot;looks&quot;</span>, <span class="st">&quot;good&quot;</span>)</span></code></pre></div>
 </div>
 <div id="output" class="section level2 solution">
 <h2>Output</h2>
@@ -280,12 +301,12 @@ Cats only sweat through their paws and nowhere else on their body
 <div id="figures" class="section level2">
 <h2>Figures</h2>
 <p>You can also include figures generated from RMarkdown:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">Sky =</span> <span class="dv">78</span>, <span class="st">&quot;Sunny side of pyramid&quot;</span> <span class="ot">=</span> <span class="dv">17</span>, <span class="st">&quot;Shady side of pyramid&quot;</span> <span class="ot">=</span> <span class="dv">5</span>), </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">init.angle =</span> <span class="dv">315</span>, </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;deepskyblue&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;yellow3&quot;</span>), </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">border =</span> <span class="cn">FALSE</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">Sky =</span> <span class="dv">78</span>, <span class="st">&quot;Sunny side of pyramid&quot;</span> <span class="ot">=</span> <span class="dv">17</span>, <span class="st">&quot;Shady side of pyramid&quot;</span> <span class="ot">=</span> <span class="dv">5</span>), </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">init.angle =</span> <span class="dv">315</span>, </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;deepskyblue&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;yellow3&quot;</span>), </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">border =</span> <span class="cn">FALSE</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <div class="figure" style="text-align: center">
 <img src="fig/01-introduction-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid"  />
 <p class="caption">
@@ -312,7 +333,7 @@ Sun arise each and every morning
 <li>Run <code>sandpaper::build_lesson()</code> to preview your lesson locally</li>
 </ul>
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div>
 <pre class="output"><code>─ Session info ───────────────────────────────────────────────────────────────────────────────────
  setting  value                       
  version  R version 4.1.1 (2021-08-10)
@@ -348,7 +369,7 @@ Sun arise each and every morning
  P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/packages/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppMVIx7/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpwDpOlT/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.</code></pre>
