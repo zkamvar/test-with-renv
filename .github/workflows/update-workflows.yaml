@@ -41,7 +41,7 @@ jobs:
           "https://github.com/settings/tokens/new?scopes=repo,workflow&description=Sandpaper%20Token\n"\
           "Once you have created the token, go to"\
           "https://github.com/${{ github.repository }}/settings/secrets/actions/SANDPAPER_WORKFLOW"\
-                                                                                                   "to update it"
+          "to update it"
 
   update_workflow:
     name: "Update Workflow"
