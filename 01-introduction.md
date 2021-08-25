@@ -21,21 +21,25 @@ exercises: 2
 
 
 
-```r
-library("curl")
-library("cowsay")
-```
+```{.output}
 
-```{.error}
-Error in library("cowsay"): there is no package called 'cowsay'
-```
-
-```r
-say("catfact", "cat")
-```
-
-```{.error}
-Error in say("catfact", "cat"): could not find function "say"
+ -------------- 
+Cats only sweat through their paws and nowhere else on their body 
+ --------------
+    \
+      \
+        \
+            |\___/|
+          ==) ^Y^ (==
+            \  ^  /
+             )=*=(
+            /     \
+            |     |
+           /| | | |\
+           \| | |_|/\
+      jgs  //_// ___/
+               \_)
+  
 ```
 
 
@@ -146,23 +150,32 @@ sessioninfo::session_info()
  date     2021-08-25                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
- package     * version    date       lib source                                      
- assertthat    0.2.1      2019-03-21 [1] CRAN (R 4.1.0)                              
- cli           3.0.1      2021-07-17 [1] CRAN (R 4.1.0)                              
- curl        * 4.3.2      2021-06-23 [1] CRAN (R 4.1.0)                              
- evaluate      0.14       2019-05-28 [1] CRAN (R 4.1.0)                              
- highr         0.9        2021-04-16 [1] CRAN (R 4.1.0)                              
- knitr         1.33       2021-04-24 [1] CRAN (R 4.1.0)                              
- magrittr      2.0.1      2020-11-17 [1] CRAN (R 4.1.0)                              
- sandpaper     0.0.0.9046 2021-08-20 [1] https://carpentries.r-universe.dev (R 4.1.1)
- sessioninfo   1.1.1      2018-11-05 [1] CRAN (R 4.1.0)                              
- stringi       1.7.4      2021-08-12 [1] https://carpentries.r-universe.dev (R 4.1.0)
- stringr       1.4.0      2019-02-10 [1] CRAN (R 4.1.0)                              
- withr         2.4.2      2021-04-18 [1] CRAN (R 4.1.0)                              
- xfun          0.25       2021-08-06 [1] CRAN (R 4.1.0)                              
+ ! package     * version    date       lib source                                      
+ R assertthat    0.2.1      <NA>       [?] <NA>                                        
+ P cli           3.0.1      2021-07-17 [?] CRAN (R 4.1.0)                              
+ P cowsay      * 0.8.0      2020-02-06 [?] CRAN (R 4.1.0)                              
+ P crayon        1.4.1      2021-02-08 [?] CRAN (R 4.1.0)                              
+ P curl        * 4.3.2      2021-06-23 [?] CRAN (R 4.1.0)                              
+ P evaluate      0.14       2019-05-28 [?] CRAN (R 4.1.0)                              
+ P fortunes      1.5-4      2016-12-29 [?] CRAN (R 4.1.0)                              
+ P highr         0.9        2021-04-16 [?] CRAN (R 4.1.0)                              
+ P jsonlite      1.7.2      2020-12-09 [?] CRAN (R 4.1.0)                              
+ P knitr         1.33       2021-04-24 [?] CRAN (R 4.1.0)                              
+ P magrittr      2.0.1      2020-11-17 [?] CRAN (R 4.1.0)                              
+ P renv          0.14.0     2021-07-21 [?] CRAN (R 4.1.0)                              
+ P rmsfact       0.0.3      2016-08-04 [?] CRAN (R 4.1.0)                              
+ R sandpaper     0.0.0.9047 <NA>       [?] <NA>                                        
+ P sessioninfo   1.1.1      2018-11-05 [?] CRAN (R 4.1.0)                              
+ P stringi       1.7.4      2021-08-12 [?] https://carpentries.r-universe.dev (R 4.1.0)
+ P stringr       1.4.0      2019-02-10 [?] CRAN (R 4.1.0)                              
+ P withr         2.4.2      2021-04-18 [?] CRAN (R 4.1.0)                              
+ P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
 
-[1] /Users/runner/work/_temp/Library
-[2] /Library/Frameworks/R.framework/Versions/4.1/Resources/library
+[1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/packages/renv/library/R-4.1/x86_64-apple-darwin17.0
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppMVIx7/renv-system-library
+
+ P ── Loaded and on-disk path mismatch.
+ R ── Package was removed from disk.
 ```
 
 
