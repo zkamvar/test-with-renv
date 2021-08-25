@@ -107,3 +107,41 @@ Cool, right?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+```r
+sessioninfo::session_info()
+```
+
+```{.output}
+─ Session info ───────────────────────────────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 4.1.1 (2021-08-10)
+ os       macOS Catalina 10.15.7      
+ system   x86_64, darwin17.0          
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       UTC                         
+ date     2021-08-25                  
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────
+ package     * version    date       lib source                                      
+ assertthat    0.2.1      2019-03-21 [1] CRAN (R 4.1.0)                              
+ cli           3.0.1      2021-07-17 [1] CRAN (R 4.1.0)                              
+ evaluate      0.14       2019-05-28 [1] CRAN (R 4.1.0)                              
+ highr         0.9        2021-04-16 [1] CRAN (R 4.1.0)                              
+ knitr         1.33       2021-04-24 [1] CRAN (R 4.1.0)                              
+ magrittr      2.0.1      2020-11-17 [1] CRAN (R 4.1.0)                              
+ sandpaper     0.0.0.9046 2021-08-20 [1] https://carpentries.r-universe.dev (R 4.1.1)
+ sessioninfo   1.1.1      2018-11-05 [1] CRAN (R 4.1.0)                              
+ stringi       1.7.4      2021-08-12 [1] https://carpentries.r-universe.dev (R 4.1.0)
+ stringr       1.4.0      2019-02-10 [1] CRAN (R 4.1.0)                              
+ withr         2.4.2      2021-04-18 [1] CRAN (R 4.1.0)                              
+ xfun          0.25       2021-08-06 [1] CRAN (R 4.1.0)                              
+
+[1] /Users/runner/work/_temp/Library
+[2] /Library/Frameworks/R.framework/Versions/4.1/Resources/library
+```
+
+
