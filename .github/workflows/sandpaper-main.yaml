@@ -68,6 +68,7 @@ jobs:
           pkgs <- package_deps('sandpaper', dependencies = TRUE)
           pkgs$diff[pkgs$package == "tinkr"] <- -1 # force tinkr update for now
           update(pkgs, upgrade = "always")
+          install_github("carpentries/sandpaper#158")
         shell: Rscript {0}
 
       - name: "Show Session Information"
