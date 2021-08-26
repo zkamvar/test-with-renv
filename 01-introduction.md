@@ -41,7 +41,7 @@ say("catfact", "cat")
 ```{.output}
 
  -------------- 
-Cats are extremely sensitive to vibrations. Cats are said to detect earthquake tremors 10 or 15 minutes before humans can. 
+A queen (female cat) can begin mating when she is between 5 and 9 months old. 
  --------------
     \
       \
@@ -181,11 +181,12 @@ sessioninfo::session_info()
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       UTC                         
- date     2021-08-25                  
+ date     2021-08-26                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
  ! package     * version    date       lib source                                      
  R assertthat    0.2.1      <NA>       [?] <NA>                                        
+ R callr         3.7.0      <NA>       [?] <NA>                                        
  P cli           3.0.1      2021-07-17 [?] CRAN (R 4.1.0)                              
  P cowsay      * 0.8.0      2020-02-06 [?] CRAN (R 4.1.0)                              
  P crayon        1.4.1      2021-02-08 [?] CRAN (R 4.1.0)                              
@@ -196,9 +197,12 @@ sessioninfo::session_info()
  P jsonlite      1.7.2      2020-12-09 [?] CRAN (R 4.1.0)                              
  P knitr         1.33       2021-04-24 [?] CRAN (R 4.1.0)                              
  P magrittr      2.0.1      2020-11-17 [?] CRAN (R 4.1.0)                              
+ R processx      3.5.2      <NA>       [?] <NA>                                        
+ R ps            1.6.0      <NA>       [?] <NA>                                        
+ R R6            2.5.1      <NA>       [?] <NA>                                        
  P renv          0.14.0     2021-07-21 [?] CRAN (R 4.1.0)                              
  P rmsfact       0.0.3      2016-08-04 [?] CRAN (R 4.1.0)                              
- R sandpaper     0.0.0.9047 <NA>       [?] <NA>                                        
+ R sandpaper     0.0.0.9048 <NA>       [?] <NA>                                        
  P sessioninfo   1.1.1      2018-11-05 [?] CRAN (R 4.1.0)                              
  P stringi       1.7.4      2021-08-12 [?] https://carpentries.r-universe.dev (R 4.1.0)
  P stringr       1.4.0      2019-02-10 [?] CRAN (R 4.1.0)                              
@@ -206,7 +210,7 @@ sessioninfo::session_info()
  P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/packages/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpwDpOlT/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpGL2xzd/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
