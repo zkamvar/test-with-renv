@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="last-modified" content="2021-08-26 15:14:46 +0000">
+<meta http-equiv="last-modified" content="2021-08-26 20:02:10 +0000">
 
 
 
@@ -205,8 +205,17 @@
       <h1></h1>
 <p>This is a test lesson for the package management of {sandpaper}. It is still experimental, but if you would like to try this out, you can use:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;carpentries/sandpaper@package-management&quot;</span>)</span></code></pre></div>
-<p>This will build your old lessons the same way, but when a new lesson is created, it will create a private library for your lesson and a record of what packages are used in the lesson. You can find an example in <a href="episodes/01-introduction.html">the introduction chapter</a>.</p>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;carpentries/sandpaper@package-management&quot;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>sandpaper<span class="sc">:::</span><span class="fu">use_package_cache</span>() <span class="co"># prompt for consent to use the package cache</span></span></code></pre></div>
+<p>This will build your old lessons the same way, but when a new lesson is created, it will create a private library for your lesson and a record of what packages are used in the lesson. You can find an example in <a href="01-introduction.html">the introduction chapter</a>.</p>
+<aside class="callout">
+<div id="a-note-about-your-global-.rprofile" class="section level3">
+<h3>A note about your global ~/.Rprofile</h3>
+<p>There is currently a feature of {renv} that will include packages from your global .Rprofile in the package cache for your lesson. While it will not include these packages in the lockfile, if you have an .Rprofile file that uses other packages, you might want to consider disabling it for now.</p>
+<p>See <a href="https://github.com/rstudio/renv/issues/821" class="uri">https://github.com/rstudio/renv/issues/821</a> for details.</p>
+</div>
+</aside>
     </div>
   </div>
 </div>
