@@ -95,11 +95,16 @@ Pinf.resamp <- resample.ia(Pinf, reps = 999)
 library("ggplot2")
 ggplot(Pinf.resamp[2], aes(x = rbarD)) +
   geom_histogram(bins = 30) +
-  geom_vline(xintercept = Pinf_ia[2]) +
-  annotate("label", x = Pinf_ia[2], y = 60, label = "Observed Index", hjust = 0) +
-  geom_vline(xintercept = Pinf_cc[2], linetype = 2) +
-  annotate("label", x = Pinf_cc[2], y = 50, label = "Observed Index (clone-corrected)", hjust = 0) +
-  xlab(expression(bar(r)[d]))
+  geom_vline(xintercept = Pinf_ia[3]) +
+  annotate("label", x = Pinf_ia[3], y = 60, label = "Observed Index", hjust = 0) +
+  geom_vline(xintercept = Pinf_cc[3], linetype = 2) +
+  annotate("label", x = Pinf_cc[3], y = 50, label = "Observed Index (clone-corrected)", hjust = 0) +
+  xlab(expression(bar(r)[d])) +
+  xlim(c(0, NA))
+```
+
+```{.warning}
+Warning: Removed 1 rows containing missing values (geom_bar).
 ```
 
 <div class="figure" style="text-align: center">
