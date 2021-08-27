@@ -3,7 +3,7 @@
 "LICENSE.md" "afaf427b4223952624dcb6d8ded53ec0" "site/built/LICENSE.md"
 "index.md" "7826057ebe2232d9d7aa76b56ca73ff2" "site/built/index.md"
 "episodes/01-introduction.Rmd" "cb436dbf1c8280ade802cb11fa97a4bb" "site/built/01-introduction.md"
-"episodes/02-poppr-example.Rmd" "e4e68dd9bef84257aa6ca8eb5f2b73fd" "site/built/02-poppr-example.md"
+"episodes/02-poppr-example.Rmd" "f7c5d90644197947807a1a22bbca4757" "site/built/02-poppr-example.md"
 "instructors/instructor-notes.md" "60b93493cf1da06dfd63255d73854461" "site/built/instructor-notes.md"
 "learners/Setup.md" "0e4e4d7028efbf7d756a08217126884f" "site/built/Setup.md"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md"

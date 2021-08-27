@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="last-modified" content="2021-08-27 15:29:08 +0000">
+<meta http-equiv="last-modified" content="2021-08-27 15:34:57 +0000">
 
 
 
@@ -275,11 +275,13 @@ Population information:
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Pinf.resamp[<span class="dv">2</span>], <span class="fu">aes</span>(<span class="at">x =</span> rbarD)) <span class="sc">+</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_ia[<span class="dv">2</span>]) <span class="sc">+</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_ia[<span class="dv">2</span>], <span class="at">y =</span> <span class="dv">60</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_cc[<span class="dv">2</span>], <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_cc[<span class="dv">2</span>], <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index (clone-corrected)&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="fu">expression</span>(<span class="fu">bar</span>(r)[d]))</span></code></pre></div>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_ia[<span class="dv">3</span>]) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_ia[<span class="dv">3</span>], <span class="at">y =</span> <span class="dv">60</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_cc[<span class="dv">3</span>], <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_cc[<span class="dv">3</span>], <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index (clone-corrected)&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="fu">expression</span>(<span class="fu">bar</span>(r)[d])) <span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>))</span></code></pre></div>
+<pre class="warning"><code>Warning: Removed 1 rows containing missing values (geom_bar).</code></pre>
 <div class="figure" style="text-align: center">
 <img src="fig/02-poppr-example-rendered-resample-1.png" alt="histogram of the index of association; a solid vertical line represents the observed value of the index of association; a dotted vertical line to the right represents the observed value of the clone corrected data."  />
 <p class="caption">
