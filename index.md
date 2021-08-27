@@ -3,11 +3,11 @@ site: sandpaper::sandpaper_site
 ---
 
 This is a test lesson for the package management of {sandpaper}. It is still 
-experimental, but if you would like to try this out, you can use:
+experimental, but if you would like to try this out, you can use the following
+commands.
 
 ```r
-install.packages("renv")
-remotes::install_github("carpentries/sandpaper@package-management")
+install.packages(c("renv", "sandpaper"), repos = "https://zkamvar.r-universe.dev/")
 
 sandpaper::use_package_cache() # prompt for consent to use the package cache
 ```
@@ -22,9 +22,9 @@ chapter](01-introduction.Rmd).
 ## A note about your global ~/.Rprofile
 
 There is currently a feature of {renv} that will include packages from your
-global .Rprofile in the package cache for your lesson. While it will not include
-these packages in the lockfile, if you have an .Rprofile file that uses other
-packages, you might want to consider disabling it for now.
+global .Rprofile in the package cache for your lesson. This has been fixed on
+the development version of renv (> 0.14), which you will get by running the
+`install.packages()` command above.
 
 See <https://github.com/rstudio/renv/issues/821> for details.
 
