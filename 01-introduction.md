@@ -41,7 +41,7 @@ say("catfact", "cat")
 ```{.output}
 
  -------------- 
-A queen (female cat) can begin mating when she is between 5 and 9 months old. 
+A cat uses its whiskers for measuring distances.  The whiskers of a cat are capable of registering very small changes in air pressure. 
  --------------
     \
       \
@@ -181,7 +181,7 @@ sessioninfo::session_info()
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       UTC                         
- date     2021-08-26                  
+ date     2021-08-27                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
  ! package     * version    date       lib source                                      
@@ -210,7 +210,7 @@ sessioninfo::session_info()
  P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/packages/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpGL2xzd/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmptVrFDV/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
