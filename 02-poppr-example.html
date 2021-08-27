@@ -12,7 +12,7 @@
 
 
 
-<title>Lesson Title: FIXME</title>
+<title>Lesson Title: Example with the {poppr} package</title>
 
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicons/cp/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/cp/apple-touch-icon-114x114.png" />
@@ -74,7 +74,7 @@
 
 
 
-<meta property="og:title" content="FIXME" />
+<meta property="og:title" content="Example with the {poppr} package" />
 
 
 
@@ -204,10 +204,95 @@
 <div class="row">
   <div class="contents col-md-9">
     <div class="page-header">
-      <h1>FIXME</h1>
+      <h1>Example with the {poppr} package</h1>
     </div>
 
-<p>This is a placeholder file. Please add content here.</p>
+<div class="section level2 objectives">
+<h2>Overview</h2>
+<div class="row">
+<div class="col-md-3">
+<p><strong>Teaching: </strong> 10<br />
+<strong>Exercises: </strong> 2</p>
+</div>
+<div class="col-md-9">
+<p><strong>Questions</strong></p>
+<ul>
+<li>Does this example work if you have never used the package before?</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+
+</div>
+<div class="col-md-9">
+<p><strong>Objectives</strong></p>
+<ul>
+<li>Introduce the {poppr} package</li>
+<li>Demonstrate resampling of <span class="math inline">\(\bar{r}_d\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>The standardized index of association (<span class="math inline">\(\bar{r}_d\)</span>) is a method to assess multilocus linkage disequilibrium in a random sample from a single population.</p>
+<p>This can be calculated via the {poppr} package:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;poppr&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">24</span>))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Pinf)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Pinf)</span></code></pre></div>
+<pre class="output"><code>
+This is a genclone object
+-------------------------
+Genotype information:
+
+   72 multilocus genotypes 
+   86 tetraploid individuals
+   11 codominant loci
+
+Population information:
+
+    2 strata - Continent, Country
+    2 populations defined - South America, North America</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Pinf_ia <span class="ot">&lt;-</span> <span class="fu">ia</span>(Pinf, <span class="at">sample =</span> <span class="dv">999</span>)</span></code></pre></div>
+<p><img src="fig/02-poppr-example-rendered-ia-1.png" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Pinf_ia)</span></code></pre></div>
+<pre class="output"><code>        Ia       p.Ia      rbarD       p.rD 
+0.65243253 0.00100000 0.07166177 0.00100000 </code></pre>
+<p>We can also clone-correct the data to remove repeated genotypes, which may represent resamples of the same genet.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Pinf_cc <span class="ot">&lt;-</span> <span class="fu">ia</span>(<span class="fu">clonecorrect</span>(Pinf), <span class="at">sample =</span> <span class="dv">999</span>)</span></code></pre></div>
+<p><img src="fig/02-poppr-example-rendered-ia_cc-1.png" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Pinf_cc)</span></code></pre></div>
+<pre class="output"><code>        Ia       p.Ia      rbarD       p.rD 
+0.47044566 0.00100000 0.05124452 0.00100000 </code></pre>
+<p>This index has no known distribution, but we can get an idea of the spread by resampling it by the unique number of mulitlocus genotypes.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the resampled index</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Pinf.resamp <span class="ot">&lt;-</span> <span class="fu">resample.ia</span>(Pinf, <span class="at">reps =</span> <span class="dv">999</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Pinf.resamp[<span class="dv">2</span>], <span class="fu">aes</span>(<span class="at">x =</span> rbarD)) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_ia[<span class="dv">2</span>]) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_ia[<span class="dv">2</span>], <span class="at">y =</span> <span class="dv">60</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_cc[<span class="dv">2</span>], <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_cc[<span class="dv">2</span>], <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index (clone-corrected)&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="fu">expression</span>(<span class="fu">bar</span>(r)[d]))</span></code></pre></div>
+<div class="figure" style="text-align: center">
+<img src="fig/02-poppr-example-rendered-resample-1.png" alt="histogram of the index of association; a solid vertical line represents the observed value of the index of association; a dotted vertical line to the right represents the observed value of the clone corrected data."  />
+<p class="caption">
+Distribution of the index of assocation for 999 samples of 72 genotypes
+</p>
+</div>
+</div>
+<div class="section level2 keypoints">
+<h2>Keypoints</h2>
+<ul>
+<li>This is a demo of the {poppr} package</li>
+</ul>
+</div>
 
   </div>
 
@@ -229,7 +314,7 @@
   <div class="row">
     <div class="col-xs-1">
       <h3 class="text-left">
-        <a href="index.html"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+        <a href="01-introduction.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
       </h3>
     </div>
     <div class="col-xs-10">
@@ -250,7 +335,7 @@
       by <a href="https://softwarecarpentry.org">Software Carpentry Foundation</a>
     </div>
     <div class="col-md-6 help-links pull-right" align="right">
-      <a href="https://github.com/zkamvar/test-with-renv/edit/main/instructors/instructor-notes.md" data-checker-ignore>Edit on GitHub</a>
+      <a href="https://github.com/zkamvar/test-with-renv/edit/main/episodes/02-poppr-example.Rmd" data-checker-ignore>Edit on GitHub</a>
       /
       <a href="https://github.com/zkamvar/test-with-renv/blob/main/CONTRIBUTING.md" data-checker-ignore>Contributing</a>
       /
