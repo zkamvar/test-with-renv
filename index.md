@@ -9,7 +9,7 @@ experimental, but if you would like to try this out, you can use:
 install.packages("renv")
 remotes::install_github("carpentries/sandpaper@package-management")
 
-sandpaper:::use_package_cache() # prompt for consent to use the package cache
+sandpaper::use_package_cache() # prompt for consent to use the package cache
 ```
 
 This will build your old lessons the same way, but when a new lesson is created,
