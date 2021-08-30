@@ -173,10 +173,10 @@
     },
     "cowsay": {
       "Package": "cowsay",
-      "Version": "0.8.0",
+      "Version": "0.7.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "3c5fdcb12517c29280e6e66f77f77803"
+      "Hash": "9e62faebe75e4ae7ef29ac199d0c5f89"
     },
     "cpp11": {
       "Package": "cpp11",
