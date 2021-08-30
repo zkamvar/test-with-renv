@@ -74,7 +74,7 @@ jobs:
       - name: "Build Site"
         id: build-site
         run: |
-          echo git diff --name-only ${{ github.base_ref }} ${{ github.head_ref }}
+          echo $(git diff --name-only ${{ github.base_ref }} ${{ github.head_ref }})
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           Rscript -e 'sandpaper::build_lesson()'
