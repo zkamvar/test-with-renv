@@ -31,6 +31,9 @@ for sandpaper, but I can use it to generate random cat facts for my lesson
 
 ### Demo
 
+> I'm using version 0.8.0 because it allows me to [hide the package startup 
+messages while giving me the results](https://github.com/sckott/cowsay/pull/72).
+
 ```{r wisdom, message = FALSE}
 library("curl")
 library("cowsay")
