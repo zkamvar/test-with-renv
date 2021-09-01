@@ -85,7 +85,7 @@ jobs:
         id: build-site
         run: |
           wd <- '${{ github.workspace }}'
-          sandpaper::manage_deps(wd, quiet = FALSE)
+          deps <- sandpaper::manage_deps(wd, quiet = FALSE)
           sandpaper:::check_git_user(path = wd, name = 'GitHub Actions', email = 'actions@github.com')
           sandpaper:::create_site(wd)
           sandpaper:::build_markdown(wd)
