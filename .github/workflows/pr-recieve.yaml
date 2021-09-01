@@ -11,6 +11,7 @@ jobs:
     runs-on: macOS-latest
     if: ${{ github.event.action != 'closed' }}
     env:
+      RENV_PATHS_ROOT: ~/Library/Application Support/renv
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       CHIVE: ${{ github.workspace }}/site/chive
       PR: ${{ github.workspace }}/site/pr
