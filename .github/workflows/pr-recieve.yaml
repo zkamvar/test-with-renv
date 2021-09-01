@@ -84,10 +84,11 @@ jobs:
       - name: "Build Site"
         id: build-site
         run: |
-          sandpaper:::check_git_user(path = ".", name = "GitHub Actions", email = "actions@github.com")
-          sandpaper:::create_site()
-          sandpaper::use_package_cache(quiet = FALSE)
-          sandpaper:::build_markdown()
+          wd <- '${{ github.workspace }}'
+          sandpaper::manage_deps(wd, quiet = FALSE)
+          sandpaper:::check_git_user(path = wd, name = 'GitHub Actions', email = 'actions@github.com')
+          sandpaper:::create_site(wd)
+          sandpaper:::build_markdown(wd)
         shell: Rscript {0}
 
       - name: "Generate Artifacts"
