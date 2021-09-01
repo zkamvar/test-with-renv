@@ -27,7 +27,8 @@ exercises: 2
 We can now include non-standard packages in our {sandpaper} sites and have them
 be reproducible! Case in point: [the {cowsay} 
 package](https://cran.r-project.org/package=cowsay) is not one of the imports
-for sandpaper, but I can use it to generate random cat facts for my lesson
+for sandpaper, but I can use it to generate random cat facts for my lesson, as
+shown below.
 
 ### Demo
 
@@ -36,6 +37,27 @@ for sandpaper, but I can use it to generate random cat facts for my lesson
 library("curl")
 library("cowsay")
 say("catfact", "cat")
+```
+
+```{.output}
+
+ -------------- 
+In just 7 years, one un-spayed female cat and one un-neutered male cat and their offspring can result in 420,000 kittens. 
+ --------------
+    \
+      \
+        \
+            |\___/|
+          ==) ^Y^ (==
+            \  ^  /
+             )=*=(
+            /     \
+            |     |
+           /| | | |\
+           \| | |_|/\
+      jgs  //_// ___/
+               \_)
+  
 ```
 
 ### Try it yourself!
@@ -160,14 +182,14 @@ sessioninfo::session_info()
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       UTC                         
- date     2021-08-31                  
+ date     2021-09-01                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
  ! package     * version    date       lib source                                      
  R assertthat    0.2.1      <NA>       [?] <NA>                                        
  R callr         3.7.0      <NA>       [?] <NA>                                        
  P cli           3.0.1      2021-07-17 [?] CRAN (R 4.1.0)                              
- P cowsay      * 0.7.0      2018-09-18 [?] CRAN (R 4.1.1)                              
+ P cowsay      * 0.8.0      2020-02-06 [?] CRAN (R 4.1.0)                              
  P crayon        1.4.1      2021-02-08 [?] CRAN (R 4.1.0)                              
  P curl        * 4.3.2      2021-06-23 [?] CRAN (R 4.1.0)                              
  P evaluate      0.14       2019-05-28 [?] CRAN (R 4.1.0)                              
@@ -189,7 +211,7 @@ sessioninfo::session_info()
  P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/packages/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmphy2q7Y/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpSX72j2/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
