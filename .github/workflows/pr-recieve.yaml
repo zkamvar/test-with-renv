@@ -85,6 +85,7 @@ jobs:
         id: build-site
         run: |
           sandpaper:::check_git_user(path = ".", name = "GitHub Actions", email = "actions@github.com")
+          sandpaper:::create_site()
           sandpaper::use_package_cache(quiet = FALSE)
           sandpaper:::build_markdown()
         shell: Rscript {0}
