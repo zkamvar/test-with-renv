@@ -55,6 +55,14 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
+      - name: "Restore {renv} Cache"
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys:
+            ${{ runner.os }}-renv-
+
       - name: "Install {sandpaper} and Dependencies"
         run: |
           options(repos = c(
@@ -76,7 +84,8 @@ jobs:
         id: build-site
         run: |
           sandpaper:::check_git_user(path = ".", name = "GitHub Actions", email = "actions@github.com")
-          sandpaper::build_lesson(quiet = FALSE)
+          sandpaper::use_package_cache(quiet = FALSE)
+          sandpaper::build_lesson()
         shell: Rscript {0}
 
       - name: "Generate Artifacts"
