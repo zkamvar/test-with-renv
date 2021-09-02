@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="last-modified" content="2021-09-01 17:59:37 +0000">
+<meta http-equiv="last-modified" content="2021-09-02 01:12:40 +0000">
 
 
 
@@ -249,7 +249,7 @@
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">say</span>(<span class="st">&quot;catfact&quot;</span>, <span class="st">&quot;cat&quot;</span>)</span></code></pre></div>
 <pre class="output"><code>
  -------------- 
-In just 7 years, one un-spayed female cat and one un-neutered male cat and their offspring can result in 420,000 kittens. 
+All cats have claws, and all except the cheetah sheath them when at rest. 
  --------------
     \
       \
@@ -268,9 +268,12 @@ In just 7 years, one un-spayed female cat and one un-neutered male cat and their
 </div>
 <div id="try-it-yourself" class="section level3">
 <h3>Try it yourself!</h3>
-<p>To try this out, install the development version of sandpaper with <code>remotes</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;carpentries/sandpaper@package-management&quot;</span>)</span></code></pre></div>
+<p>To try this out, install the development version of sandpaper from my universe:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">zkamvar =</span> <span class="st">&#39;https://zkamvar.r-universe.dev&#39;</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">CRAN =</span> <span class="st">&#39;https://cloud.r-project.org&#39;</span>))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;sandpaper&#39;</span>)</span></code></pre></div>
 <p>Then, clone this repository and run <code>sandpaper::build_lesson()</code> inside the repository from your R console. Should this work, the dependencies will automatically install to a library specific to the lesson and the lesson will render, regardless if you have {cowsay} previously installed.</p>
 </div>
 </div>
@@ -347,7 +350,7 @@ Sun arise each and every morning
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       UTC                         
- date     2021-09-01                  
+ date     2021-09-02                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
  ! package     * version    date       lib source                                      
@@ -376,7 +379,7 @@ Sun arise each and every morning
  P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/packages/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpSX72j2/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpp5ycw0/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.</code></pre>
