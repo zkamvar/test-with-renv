@@ -40,11 +40,14 @@ say("catfact", "cat")
 
 ### Try it yourself!
 
-To try this out, install the development version of sandpaper with `remotes`:
+To try this out, install the development version of sandpaper from my universe:
 
 ```{r eval = FALSE}
-install.packages("renv")
-remotes::install_github("carpentries/sandpaper@package-management")
+options(repos = c(
+    zkamvar = 'https://zkamvar.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+install.packages('sandpaper')
 ```
 
 Then, clone this repository and run `sandpaper::build_lesson()` inside the 
