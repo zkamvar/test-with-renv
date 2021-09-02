@@ -42,7 +42,7 @@ say("catfact", "cat")
 ```{.output}
 
  -------------- 
-In just 7 years, one un-spayed female cat and one un-neutered male cat and their offspring can result in 420,000 kittens. 
+All cats have claws, and all except the cheetah sheath them when at rest. 
  --------------
     \
       \
@@ -62,12 +62,15 @@ In just 7 years, one un-spayed female cat and one un-neutered male cat and their
 
 ### Try it yourself!
 
-To try this out, install the development version of sandpaper with `remotes`:
+To try this out, install the development version of sandpaper from my universe:
 
 
 ```r
-install.packages("renv")
-remotes::install_github("carpentries/sandpaper@package-management")
+options(repos = c(
+    zkamvar = 'https://zkamvar.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+install.packages('sandpaper')
 ```
 
 Then, clone this repository and run `sandpaper::build_lesson()` inside the 
@@ -182,7 +185,7 @@ sessioninfo::session_info()
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       UTC                         
- date     2021-09-01                  
+ date     2021-09-02                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
  ! package     * version    date       lib source                                      
@@ -211,7 +214,7 @@ sessioninfo::session_info()
  P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/packages/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpSX72j2/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpp5ycw0/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
