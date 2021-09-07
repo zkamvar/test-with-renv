@@ -42,7 +42,7 @@ say("catfact", "cat")
 ```{.output}
 
  -------------- 
-All cats have claws, and all except the cheetah sheath them when at rest. 
+Many Egyptians worshipped the goddess Bast, who had a woman’s body and a cat’s head. 
  --------------
     \
       \
@@ -185,7 +185,7 @@ sessioninfo::session_info()
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       UTC                         
- date     2021-09-02                  
+ date     2021-09-07                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
  ! package     * version    date       lib source                                      
@@ -213,8 +213,8 @@ sessioninfo::session_info()
  P withr         2.4.2      2021-04-18 [?] CRAN (R 4.1.0)                              
  P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
 
-[1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/packages/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpp5ycw0/renv-system-library
+[1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/lesson-requirements/renv/library/R-4.1/x86_64-apple-darwin17.0
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpJM1YvU/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
