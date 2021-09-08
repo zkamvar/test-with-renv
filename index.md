@@ -24,8 +24,7 @@ chapter](01-introduction.Rmd).
 
 There is currently a feature of {renv} that will include packages from your
 global .Rprofile in the package cache for your lesson. This has been fixed on
-the development version of renv (> 0.14), which you will get by running the
-`install.packages()` command above.
+the development version of renv (> 0.14).
 
 See <https://github.com/rstudio/renv/issues/821> for details.
 
