@@ -7,7 +7,8 @@ experimental, but if you would like to try this out, you can use the following
 commands.
 
 ```r
-install.packages(c("renv", "sandpaper"), repos = "https://zkamvar.r-universe.dev/")
+install.pacakges("renv")
+install.packages("sandpaper", repos = "https://zkamvar.r-universe.dev/")
 
 sandpaper::use_package_cache() # prompt for consent to use the package cache
 ```
