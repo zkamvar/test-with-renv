@@ -83,6 +83,7 @@ jobs:
             carpentries = "https://carpentries.r-universe.dev",
             carpentries_archive = "https://carpentries.github.io/drat",
             CRAN = "https://cran.rstudio.com"))
+          # install renv if we don't have it. 
           if (!requireNamespace("renv", quiet = TRUE))
             install.packages("renv")
           Sys.setenv("RENV_PROFILE" = "lesson-requirements")
