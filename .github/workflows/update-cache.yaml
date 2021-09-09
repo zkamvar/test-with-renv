@@ -84,7 +84,7 @@ jobs:
             carpentries_archive = "https://carpentries.github.io/drat",
             CRAN = "https://cran.rstudio.com"))
           # install renv if we don't have it. 
-          if (!requireNamespace("renv", quiet = TRUE))
+          if (!requireNamespace("renv", quietly = TRUE))
             install.packages("renv")
           Sys.setenv("RENV_PROFILE" = "lesson-requirements")
           renv::load()
@@ -136,11 +136,9 @@ jobs:
             ${{ steps.update.outputs.report }}
             ```
 
-            :stopwatch: In a few minutes, a comment will appear that will show you how the
-            output has changed based on these updates.
+            :stopwatch: In a few minutes, a comment will appear that will show you how the output has changed based on these updates.
 
-            If you want to inspect these changes locally, you can use the following code
-            to check out a new branch:
+            If you want to inspect these changes locally, you can use the following code to check out a new branch:
 
             ```bash
             git fetch origin update-${{ steps.update.outputs.n }}-packages-${{ steps.update.outputs.date }}
