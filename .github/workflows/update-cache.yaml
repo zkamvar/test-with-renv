@@ -124,7 +124,7 @@ jobs:
       - name: "Show variables"
         if: ${{ always() }}
         run: |
-          echo ${{ join(fromJSON(steps.update.outputs.report), '\n') }}
+          echo ${{ format(join(fromJSON(steps.update.outputs.report), '\n')) }}
           echo ${{ steps.update.outputs.n }}
           echo ${{ steps.update.outputs.date }}
           echo ${{ steps.update.outputs.n > 0 }}
@@ -146,7 +146,7 @@ jobs:
             This will update the following package versions in your lesson:
 
             ```
-            ${{ join(fromJSON(steps.update.outputs.report), '\n') }}
+            ${{ format(join(fromJSON(steps.update.outputs.report), '\n')) }}
             ```
 
             :stopwatch: In a few minutes, a comment will appear that will show you how the
