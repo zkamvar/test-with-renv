@@ -108,7 +108,7 @@ jobs:
             output has changed based on these updates.
 
             If you want to inspect these changes locally, you can use the following code
-          to check out a new branch:
+            to check out a new branch:
 
             ```bash
             git fetch origin update-${{ steps.update.outputs.n }}-packages-${{ steps.update.outputs.date }}
