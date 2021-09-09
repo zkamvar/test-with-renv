@@ -66,26 +66,26 @@ jobs:
         if: ${{ steps.check.outputs.can-update }}
         uses: r-lib/actions/setup-r@v1
 
-      - name: "Set up Pandoc"
-        if: ${{ steps.check.outputs.can-update }}
-        uses: r-lib/actions/setup-pandoc@v1
-        with:
-          pandoc-version: "2.11.4"
+      # - name: "Set up Pandoc"
+      #   if: ${{ steps.check.outputs.can-update }}
+      #   uses: r-lib/actions/setup-pandoc@v1
+      #   with:
+      #     pandoc-version: "2.11.4"
 
-      - name: "Restore {renv} Cache"
-        if: ${{ steps.check.outputs.can-update }}
-        uses: actions/cache@v2
-        with:
-          path: ${{ env.RENV_PATHS_ROOT }}
-          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
-          restore-keys:
-            ${{ runner.os }}-renv-
+      # - name: "Restore {renv} Cache"
+      #   if: ${{ steps.check.outputs.can-update }}
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: ${{ env.RENV_PATHS_ROOT }}
+      #     key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+      #     restore-keys:
+      #       ${{ runner.os }}-renv-
 
-      - name: "Install {renv}"
-        if: ${{ steps.check.outputs.can-update }}
-        run: |
-          install.packages("renv", repos = "https://cran.rstudio.com")
-        shell: Rscript {0}
+      # - name: "Install {renv}"
+      #   if: ${{ steps.check.outputs.can-update }}
+      #   run: |
+      #     install.packages("renv", repos = "https://cran.rstudio.com")
+      #   shell: Rscript {0}
 
       - name: "Update {renv} deps and determine if a PR is needed"
         id: update
@@ -114,7 +114,7 @@ jobs:
           # }
           # report <- jsonlite::toJSON(report)
           n <- 7L
-          report <- "[\"# CRAN ===============================\",\"- bslib     [0.2.5.1 -> 0.3.0]\",\"- httpuv    [1.6.2 -> 1.6.3]\",\"- knitr     [1.33 -> 1.34]\",\"- nlme      [3.1-152 -> 3.1-153]\",\"- poppr     [2.9.2 -> 2.9.3]\",\"- spdep     [repo: RSPM -> CRAN; ver: 1.1-8 -> 1.1-11]\",\"\",\"# carpentries ========================\",\"- stringi   [repo: https://carpentries.r-universe.dev -> carpentries; ver: 1.7.4 -> 1.7.4.9001; ref: HEAD -> *; sha: 592aa941 -> *]\",\"\"]")
+          report <- c("[\"# CRAN ===============================\",\"- bslib     [0.2.5.1 -> 0.3.0]\",\"- httpuv    [1.6.2 -> 1.6.3]\",\"- knitr     [1.33 -> 1.34]\",\"- nlme      [3.1-152 -> 3.1-153]\",\"- poppr     [2.9.2 -> 2.9.3]\",\"- spdep     [repo: RSPM -> CRAN; ver: 1.1-8 -> 1.1-11]\",\"\",\"# carpentries ========================\",\"- stringi   [repo: https://carpentries.r-universe.dev -> carpentries; ver: 1.7.4 -> 1.7.4.9001; ref: HEAD -> *; sha: 592aa941 -> *]\",\"\"]")
           meow  <- function(...) cat(..., "\n", sep = "")
           meow("::set-output name=report::", report)
           meow("::set-output name=n::", n)
