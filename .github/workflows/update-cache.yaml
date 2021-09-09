@@ -147,7 +147,7 @@ jobs:
             This will update the following package versions in your lesson:
 
             ```
-            ${{ steps.update.outputs.report }}
+            ${{ join(steps.update.outputs.report, '\n') }}
             ```
 
             :stopwatch: In a few minutes, a comment will appear that will show you how the
