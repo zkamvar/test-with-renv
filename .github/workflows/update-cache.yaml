@@ -15,7 +15,6 @@ jobs:
   update_workflow:
     name: "Update Workflow"
     runs-on: macOS-latest
-    steps:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       RENV_PATHS_ROOT: ~/Library/Application Support/renv
