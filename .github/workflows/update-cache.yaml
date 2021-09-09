@@ -114,7 +114,9 @@ jobs:
           # }
           # report <- jsonlite::toJSON(report)
           n <- 7L
-          report <- c("[\"# CRAN ===============================\",\"- bslib     [0.2.5.1 -> 0.3.0]\",\"- httpuv    [1.6.2 -> 1.6.3]\",\"- knitr     [1.33 -> 1.34]\",\"- nlme      [3.1-152 -> 3.1-153]\",\"- poppr     [2.9.2 -> 2.9.3]\",\"- spdep     [repo: RSPM -> CRAN; ver: 1.1-8 -> 1.1-11]\",\"\",\"# carpentries ========================\",\"- stringi   [repo: https://carpentries.r-universe.dev -> carpentries; ver: 1.7.4 -> 1.7.4.9001; ref: HEAD -> *; sha: 592aa941 -> *]\",\"\"]")
+          report <- c("things with", "newlines")
+          report <- paste(report, collapse = "%0A")
+          # report <- c("[\"# CRAN ===============================\",\"- bslib     [0.2.5.1 -> 0.3.0]\",\"- httpuv    [1.6.2 -> 1.6.3]\",\"- knitr     [1.33 -> 1.34]\",\"- nlme      [3.1-152 -> 3.1-153]\",\"- poppr     [2.9.2 -> 2.9.3]\",\"- spdep     [repo: RSPM -> CRAN; ver: 1.1-8 -> 1.1-11]\",\"\",\"# carpentries ========================\",\"- stringi   [repo: https://carpentries.r-universe.dev -> carpentries; ver: 1.7.4 -> 1.7.4.9001; ref: HEAD -> *; sha: 592aa941 -> *]\",\"\"]")
           meow  <- function(...) cat(..., "\n", sep = "")
           meow("::set-output name=report::", report)
           meow("::set-output name=n::", n)
@@ -145,7 +147,7 @@ jobs:
             This will update the following package versions in your lesson:
 
             ```
-            ${{ format('{0}', join(fromJSON(steps.update.outputs.report), '\n')) }}
+            ${{ steps.update.outputs.report }}
             ```
 
             :stopwatch: In a few minutes, a comment will appear that will show you how the
