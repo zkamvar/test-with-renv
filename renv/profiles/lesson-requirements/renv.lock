@@ -110,10 +110,10 @@
     },
     "bslib": {
       "Package": "bslib",
-      "Version": "0.2.5.1",
+      "Version": "0.3.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "2f069f3f42847231aef7baa49bed97b0"
+      "Hash": "074ebc936dbcecd7115ed8083643b550"
     },
     "cachem": {
       "Package": "cachem",
@@ -348,10 +348,10 @@
     },
     "httpuv": {
       "Package": "httpuv",
-      "Version": "1.6.2",
+      "Version": "1.6.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "a42959b003aad9fc351b10250c5a6b77"
+      "Hash": "65e865802fe6dd1bafef1dae5b80a844"
     },
     "igraph": {
       "Package": "igraph",
@@ -383,10 +383,10 @@
     },
     "knitr": {
       "Package": "knitr",
-      "Version": "1.33",
+      "Version": "1.34",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "0bc1b5da1b0eb07cd4b727e95e9ff0b8"
+      "Hash": "aa958054ac6f0360926bb952ea302f0f"
     },
     "labeling": {
       "Package": "labeling",
@@ -423,13 +423,6 @@
       "Repository": "CRAN",
       "Hash": "41287f1ac7d28a92f0a286ed507928d3"
     },
-    "markdown": {
-      "Package": "markdown",
-      "Version": "1.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "61e4a10781dd00d7d81dd06ca9b94e95"
-    },
     "mgcv": {
       "Package": "mgcv",
       "Version": "1.8-36",
@@ -453,10 +446,10 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-152",
+      "Version": "3.1-153",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "35de1ce639f20b5e10f7f46260730c65"
+      "Hash": "2d632e0d963a653a0329756ce701ecdd"
     },
     "pegas": {
       "Package": "pegas",
@@ -509,10 +502,10 @@
     },
     "poppr": {
       "Package": "poppr",
-      "Version": "2.9.2",
+      "Version": "2.9.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "5ed9e7e8b46fe5ccea790d320a14177c"
+      "Hash": "6c359d4eb4e54c01f8a2661e3c188262"
     },
     "progressr": {
       "Package": "progressr",
@@ -670,20 +663,20 @@
     },
     "spdep": {
       "Package": "spdep",
-      "Version": "1.1-8",
+      "Version": "1.1-11",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "b4fa4605fe99dd87eaee8230dbdbb0c8"
+      "Repository": "CRAN",
+      "Hash": "d36a3ef20f2d1920cb50fdcf19d8d381"
     },
     "stringi": {
       "Package": "stringi",
-      "Version": "1.7.4",
+      "Version": "1.7.4.9001",
       "Source": "Repository",
       "Repository": "https://carpentries.r-universe.dev",
       "RemoteUrl": "https://github.com/gagolews/stringi",
       "RemoteRef": "HEAD",
-      "RemoteSha": "592aa94113cf42d2808e5cda45c9bdef576b074a",
-      "Hash": "ebaccb577da50829a3bb1b8296f318a5"
+      "RemoteSha": "7248caeebc7d442ec38187240091a71ed76c536e",
+      "Hash": "a5f27f824f0ae3b166413288eea47637"
     },
     "stringr": {
       "Package": "stringr",
