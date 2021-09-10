@@ -100,11 +100,12 @@ jobs:
             n <- length(updates$diff)
             report <- utils::capture.output(print(updates))
             # https://github.community/t/set-output-truncates-multiline-strings/16852/3?u=zkamvar
-            report <- paste(report, collapse = "%0A")
+            report <- paste0("'", report, "'", collapse = "%0A")
             report <- gsub("#", ":new:", report)
             report <- gsub(" ", "%20", report)
           }
           meow  <- function(...) cat(..., "\n", sep = "")
+          cat(report)
           meow("::set-output name=report::", report)
           meow("::set-output name=n::", n)
           meow("::set-output name=date::", as.character(Sys.Date()))
