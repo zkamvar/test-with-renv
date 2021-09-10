@@ -101,6 +101,7 @@ jobs:
             report <- utils::capture.output(print(updates))
             # https://github.community/t/set-output-truncates-multiline-strings/16852/3?u=zkamvar
             report <- paste(report, collapse = "%0A")
+            report <- gsub("#", ":new:", report)
           }
           meow  <- function(...) cat(..., "\n", sep = "")
           meow("::set-output name=report::", report)
