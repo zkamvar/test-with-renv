@@ -93,12 +93,12 @@ jobs:
           shh  <- capture.output(renv::restore(library = lib, lockfile = lock))
           updates <- renv::update(library = lib, check = TRUE)
           n <- 0
-          report <- character(0)
+          the_report <- character(0)
           if (!identical(updates, TRUE)) {
             renv::update(library = lib)
             renv::snapshot(lockfile = lock)
             n <- length(updates$diff)
-            report <- utils::capture.output(print(updates))
+            the_report <- utils::capture.output(print(updates))
             # https://github.community/t/set-output-truncates-multiline-strings/16852/3?u=zkamvar
             the_report <- paste0("'", the_report, "'", collapse = "%0A")
             the_report <- gsub("#", ":new:", the_report)
