@@ -101,7 +101,7 @@ jobs:
             the_report <- utils::capture.output(print(updates), type = "message")
             # https://github.community/t/set-output-truncates-multiline-strings/16852/3?u=zkamvar
             print(the_report)
-            the_report <- paste0("'", the_report, "'", collapse = "%0A")
+            the_report <- paste0(the_report, collapse = "%0A")
             print(the_report)
           }
           print(the_report)
@@ -115,7 +115,7 @@ jobs:
         if: ${{ always() }}
         run: |
           echo '${{ steps.update.outputs.n }}'
-          echo '${{ steps.update.outputs.report }}'
+          # echo '${{ steps.update.outputs.report }}'
           echo '${{ steps.update.outputs.date }}'
           echo '${{ steps.update.outputs.n > 0 }}'
           echo '${{ steps.check.outputs.can-update && steps.update.outputs.n > 0}}'
