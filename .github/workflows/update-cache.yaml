@@ -102,8 +102,6 @@ jobs:
             # https://github.community/t/set-output-truncates-multiline-strings/16852/3?u=zkamvar
             print(the_report)
             the_report <- paste0("'", the_report, "'", collapse = "%0A")
-            the_report <- gsub("#", ":new:", the_report)
-            the_report <- gsub(" ", "%20", the_report)
             print(the_report)
           }
           print(the_report)
