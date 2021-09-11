@@ -115,7 +115,6 @@ jobs:
         if: ${{ always() }}
         run: |
           echo '${{ steps.update.outputs.n }}'
-          # echo '${{ steps.update.outputs.report }}'
           echo '${{ steps.update.outputs.date }}'
           echo '${{ steps.update.outputs.n > 0 }}'
           echo '${{ steps.check.outputs.can-update && steps.update.outputs.n > 0}}'
