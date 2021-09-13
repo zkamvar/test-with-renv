@@ -1,7 +1,7 @@
 "file" "checksum" "built"
 "CODE_OF_CONDUCT.md" "8d9e44dd5c39f241b5e8b47ecfc802d1" "site/built/CODE_OF_CONDUCT.md"
 "LICENSE.md" "afaf427b4223952624dcb6d8ded53ec0" "site/built/LICENSE.md"
-"config.yaml" "4db438028c3ca2dfccf6ca2ce115d530" "site/built/config.yaml"
+"config.yaml" "0eada924cd64dd33c26cbc5e135b2935" "site/built/config.yaml"
 "index.md" "f982c057072764f860ddef93e0251b9b" "site/built/index.md"
 "episodes/01-introduction.Rmd" "33ee62475ad05da0711c0f047f768333" "site/built/01-introduction.md"
 "episodes/02-poppr-example.Rmd" "f7c5d90644197947807a1a22bbca4757" "site/built/02-poppr-example.md"
