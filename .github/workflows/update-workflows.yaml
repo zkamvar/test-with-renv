@@ -37,8 +37,10 @@ jobs:
     steps:
       - name: "Instructions to create a new token"
         run: |
-          printf "::warning::The SANDPAPER_WORKFLOW token workflow scope is not valid\n"\
-          "If you want to have periodic pull request updates, you will need to generate a new token by going to "\
+          printf "::warning::The SANDPAPER_WORKFLOW secret is missing, invalid, "\
+          "or does not have the right scope to update workflows.\n"\
+          "If you want to have automated pull request updates to your workflows, "\
+          "you will need to generate a new token by visiting "\
           "https://github.com/settings/tokens/new?scopes=repo,workflow&description=Sandpaper%%20Token\n"\
           "Once you have created the token, go to "\
           "https://github.com/${{ github.repository }}/settings/secrets/actions/SANDPAPER_WORKFLOW "\

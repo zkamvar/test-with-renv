@@ -11,8 +11,8 @@ jobs:
     runs-on: macOS-latest
     if: ${{ github.event.action != 'closed' }}
     env:
-      RENV_PATHS_ROOT: ~/Library/Application Support/renv
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      RENV_PATHS_ROOT: ~/Library/Application Support/renv
       CHIVE: ${{ github.workspace }}/site/chive
       PR: ${{ github.workspace }}/site/pr
       MD: ${{ github.workspace }}/site/built
@@ -26,8 +26,11 @@ jobs:
           ref: md-outputs
           path: ${{ env.MD }}
 
-      - uses: r-lib/actions/setup-r@v1
-      - uses: r-lib/actions/setup-pandoc@v1
+      - name: "Set up R"
+        uses: r-lib/actions/setup-r@v1
+
+      - name: "Set up Pandoc"
+        uses: r-lib/actions/setup-pandoc@v1
         with:
           pandoc-version: "2.11.4"
 
@@ -75,6 +78,13 @@ jobs:
           pkgs <- package_deps('sandpaper', dependencies = TRUE)
           pkgs$diff[pkgs$package == "tinkr"] <- -1 # force tinkr update for now
           update(pkgs, upgrade = "always")
+          # update to use renv version of sandpaper
+          if (!"renv_carpentries_repos" %in% ls(env = asNamespace("sandpaper")))
+            install_github("carpentries/sandpaper@package-management")
+        shell: Rscript {0}
+
+      - name: "Fortify Local {renv} Packages"
+        run: sandpaper::manage_deps(path = '${{ github.workspace }}', quiet = FALSE)
         shell: Rscript {0}
 
       - name: "Show Session Information"
@@ -84,11 +94,9 @@ jobs:
       - name: "Build Site"
         id: build-site
         run: |
-          wd <- '${{ github.workspace }}'
-          deps <- sandpaper::manage_deps(wd, quiet = FALSE)
-          sandpaper:::check_git_user(path = wd, name = 'GitHub Actions', email = 'actions@github.com')
-          sandpaper:::create_site(wd)
-          sandpaper:::build_markdown(wd)
+          sandpaper::package_cache_trigger(TRUE)
+          sandpaper:::create_site(path = '${{ github.workspace }}')
+          sandpaper:::build_markdown(path = '${{ github.workspace }}', quiet = FALSE)
         shell: Rscript {0}
 
       - name: "Generate Artifacts"
