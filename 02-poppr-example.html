@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="last-modified" content="2021-09-21 00:34:41 +0000">
+<meta http-equiv="last-modified" content="2021-09-21 00:44:23 +0000">
 
 
 
@@ -256,31 +256,34 @@ Population information:
 
     2 strata - Continent, Country
     2 populations defined - South America, North America</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Pinf_ia <span class="ot">&lt;-</span> <span class="fu">ia</span>(Pinf, <span class="at">sample =</span> <span class="dv">999</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2021-09-21</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Pinf_ia <span class="ot">&lt;-</span> <span class="fu">ia</span>(Pinf, <span class="at">sample =</span> <span class="dv">999</span>)</span></code></pre></div>
 <p><img src="fig/02-poppr-example-rendered-ia-1.png" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Pinf_ia)</span></code></pre></div>
 <pre class="output"><code>        Ia       p.Ia      rbarD       p.rD 
 0.65243253 0.00100000 0.07166177 0.00100000 </code></pre>
 <p>We can also clone-correct the data to remove repeated genotypes, which may represent resamples of the same genet.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Pinf_cc <span class="ot">&lt;-</span> <span class="fu">ia</span>(<span class="fu">clonecorrect</span>(Pinf), <span class="at">sample =</span> <span class="dv">999</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2021-09-21</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Pinf_cc <span class="ot">&lt;-</span> <span class="fu">ia</span>(<span class="fu">clonecorrect</span>(Pinf), <span class="at">sample =</span> <span class="dv">999</span>)</span></code></pre></div>
 <p><img src="fig/02-poppr-example-rendered-ia_cc-1.png" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Pinf_cc)</span></code></pre></div>
 <pre class="output"><code>        Ia       p.Ia      rbarD       p.rD 
 0.47044566 0.00100000 0.05124452 0.00100000 </code></pre>
 <p>This index has no known distribution, but we can get an idea of the spread by resampling it by the unique number of mulitlocus genotypes.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the resampled index</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Pinf.resamp <span class="ot">&lt;-</span> <span class="fu">resample.ia</span>(Pinf, <span class="at">reps =</span> <span class="dv">999</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Pinf.resamp[<span class="dv">2</span>], <span class="fu">aes</span>(<span class="at">x =</span> rbarD)) <span class="sc">+</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_ia[<span class="dv">3</span>]) <span class="sc">+</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_ia[<span class="dv">3</span>], <span class="at">y =</span> <span class="dv">60</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_cc[<span class="dv">3</span>], <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_cc[<span class="dv">3</span>], <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index (clone-corrected)&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="fu">expression</span>(<span class="fu">bar</span>(r)[d])) <span class="sc">+</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>))</span></code></pre></div>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2021-09-21</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Pinf.resamp <span class="ot">&lt;-</span> <span class="fu">resample.ia</span>(Pinf, <span class="at">reps =</span> <span class="dv">999</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Pinf.resamp[<span class="dv">2</span>], <span class="fu">aes</span>(<span class="at">x =</span> rbarD)) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_ia[<span class="dv">3</span>]) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_ia[<span class="dv">3</span>], <span class="at">y =</span> <span class="dv">60</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> Pinf_cc[<span class="dv">3</span>], <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;label&quot;</span>, <span class="at">x =</span> Pinf_cc[<span class="dv">3</span>], <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Observed Index (clone-corrected)&quot;</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="fu">expression</span>(<span class="fu">bar</span>(r)[d])) <span class="sc">+</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>))</span></code></pre></div>
 <pre class="warning"><code>Warning: Removed 1 rows containing missing values (geom_bar).</code></pre>
 <div class="figure" style="text-align: center">
 <img src="fig/02-poppr-example-rendered-resample-1.png" alt="histogram of the index of association; a solid vertical line represents the observed value of the index of association; a dotted vertical line to the right represents the observed value of the clone corrected data."  />
