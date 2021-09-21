@@ -42,7 +42,7 @@ say("catfact", "cat")
 ```{.output}
 
  -------------- 
-Cats step with both left legs, then both right legs when they walk or run. 
+The oldest cat on record was Crème Puff from Austin, Texas, who lived from 1967 to August 6, 2005, three days after her 38th birthday. A cat typically can live up to 20 years, which is equivalent to about 96 human years. 
  --------------
     \
       \
@@ -185,7 +185,7 @@ sessioninfo::session_info()
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       UTC                         
- date     2021-09-11                  
+ date     2021-09-21                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
  ! package     * version    date       lib source                                      
@@ -211,10 +211,10 @@ sessioninfo::session_info()
  P stringi       1.7.4.9001 2021-09-03 [?] https://carpentries.r-universe.dev (R 4.1.1)
  P stringr       1.4.0      2019-02-10 [?] CRAN (R 4.1.0)                              
  P withr         2.4.2      2021-04-18 [?] CRAN (R 4.1.0)                              
- P xfun          0.25       2021-08-06 [?] CRAN (R 4.1.0)                              
+ P xfun          0.26       2021-09-14 [?] CRAN (R 4.1.0)                              
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/lesson-requirements/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmp6CPRPk/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmp6cvses/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.

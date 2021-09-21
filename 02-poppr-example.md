@@ -50,6 +50,7 @@ Population information:
 ```
 
 ```r
+set.seed(2021-09-21)
 Pinf_ia <- ia(Pinf, sample = 999)
 ```
 
@@ -69,6 +70,7 @@ represent resamples of the same genet.
 
 
 ```r
+set.seed(2021-09-21)
 Pinf_cc <- ia(clonecorrect(Pinf), sample = 999)
 ```
 
@@ -89,6 +91,7 @@ resampling it by the unique number of mulitlocus genotypes.
 
 ```r
 # Calculate the resampled index
+set.seed(2021-09-21)
 Pinf.resamp <- resample.ia(Pinf, reps = 999)
 
 # Create the plot
