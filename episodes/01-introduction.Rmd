@@ -33,9 +33,8 @@ shown below.
 ### Demo
 
 ```{r wisdom, message = FALSE}
-library("curl")
 library("cowsay")
-say("catfact", "cat")
+say("the catfact api is down :(", "cat")
 ```
 
 ### Try it yourself!
