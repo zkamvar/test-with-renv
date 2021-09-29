@@ -39,25 +39,10 @@ library("cowsay")
 say("catfact", "cat")
 ```
 
-```{.output}
-
- -------------- 
-Cats control the outer ear using 32 muscles; humans use 6 
- --------------
-    \
-      \
-        \
-            |\___/|
-          ==) ^Y^ (==
-            \  ^  /
-             )=*=(
-            /     \
-            |     |
-           /| | | |\
-           \| | |_|/\
-      jgs  //_// ___/
-               \_)
-  
+```{.error}
+Error in parse_con(txt, bigint_as_char): lexical error: invalid char in json text.
+                                       <br /> <b>Fatal error</b>:  Unc
+                     (right here) ------^
 ```
 
 ### Try it yourself!
@@ -185,36 +170,36 @@ sessioninfo::session_info()
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       UTC                         
- date     2021-09-28                  
+ date     2021-09-29                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
- ! package     * version    date       lib source                                      
- R assertthat    0.2.1      <NA>       [?] <NA>                                        
- R callr         3.7.0      <NA>       [?] <NA>                                        
- P cli           3.0.1      2021-07-17 [?] CRAN (R 4.1.0)                              
- P cowsay      * 0.8.0      2020-02-06 [?] CRAN (R 4.1.0)                              
- P crayon        1.4.1      2021-02-08 [?] CRAN (R 4.1.0)                              
- P curl        * 4.3.2      2021-06-23 [?] CRAN (R 4.1.0)                              
- P evaluate      0.14       2019-05-28 [?] CRAN (R 4.1.0)                              
- P fortunes      1.5-4      2016-12-29 [?] CRAN (R 4.1.0)                              
- P highr         0.9        2021-04-16 [?] CRAN (R 4.1.0)                              
- P jsonlite      1.7.2      2020-12-09 [?] CRAN (R 4.1.0)                              
- P knitr         1.34       2021-09-09 [?] CRAN (R 4.1.1)                              
- P magrittr      2.0.1      2020-11-17 [?] CRAN (R 4.1.0)                              
- R processx      3.5.2      <NA>       [?] <NA>                                        
- R ps            1.6.0      <NA>       [?] <NA>                                        
- P R6            2.5.1      2021-08-19 [?] CRAN (R 4.1.0)                              
- P renv          0.14.0     2021-07-21 [?] CRAN (R 4.1.0)                              
- P rmsfact       0.0.3      2016-08-04 [?] CRAN (R 4.1.0)                              
- R sandpaper     0.0.0.9049 <NA>       [?] <NA>                                        
- P sessioninfo   1.1.1      2018-11-05 [?] CRAN (R 4.1.0)                              
- P stringi       1.7.4.9001 2021-09-03 [?] https://carpentries.r-universe.dev (R 4.1.1)
- P stringr       1.4.0      2019-02-10 [?] CRAN (R 4.1.0)                              
- P withr         2.4.2      2021-04-18 [?] CRAN (R 4.1.0)                              
- P xfun          0.26       2021-09-14 [?] CRAN (R 4.1.0)                              
+ ! package     * version    date       lib source               
+ R assertthat    0.2.1      <NA>       [?] <NA>                 
+ R callr         3.7.0      <NA>       [?] <NA>                 
+ P cli           3.0.1      2021-07-17 [?] CRAN (R 4.1.0)       
+ P cowsay      * 0.8.0      2020-02-06 [?] CRAN (R 4.1.0)       
+ P crayon        1.4.1      2021-02-08 [?] CRAN (R 4.1.0)       
+ P curl        * 4.3.2      2021-06-23 [?] CRAN (R 4.1.0)       
+ P evaluate      0.14       2019-05-28 [?] CRAN (R 4.1.0)       
+ P fortunes      1.5-4      2016-12-29 [?] CRAN (R 4.1.0)       
+ P highr         0.9        2021-04-16 [?] CRAN (R 4.1.0)       
+ P jsonlite      1.7.2      2020-12-09 [?] CRAN (R 4.1.0)       
+ P knitr         1.34       2021-09-09 [?] CRAN (R 4.1.0)       
+ P magrittr      2.0.1      2020-11-17 [?] CRAN (R 4.1.0)       
+ R processx      3.5.2      <NA>       [?] <NA>                 
+ R ps            1.6.0      <NA>       [?] <NA>                 
+ P R6            2.5.1      2021-08-19 [?] CRAN (R 4.1.0)       
+ P renv          0.14.0     2021-07-21 [?] CRAN (R 4.1.0)       
+ P rmsfact       0.0.3      2016-08-04 [?] CRAN (R 4.1.0)       
+ R sandpaper     0.0.0.9054 <NA>       [?] <NA>                 
+ P sessioninfo   1.1.1      2018-11-05 [?] CRAN (R 4.1.0)       
+ P stringi       1.7.4.9001 2021-09-24 [?] repository (@7248cae)
+ P stringr       1.4.0      2019-02-10 [?] CRAN (R 4.1.0)       
+ P withr         2.4.2      2021-04-18 [?] CRAN (R 4.1.0)       
+ P xfun          0.26       2021-09-14 [?] CRAN (R 4.1.0)       
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/lesson-requirements/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpCAsQJA/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpzkbp45/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
