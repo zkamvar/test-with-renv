@@ -34,15 +34,29 @@ shown below.
 
 
 ```r
-library("curl")
 library("cowsay")
-say("catfact", "cat")
+say("the catfact api is down :(", "cat")
 ```
 
-```{.error}
-Error in parse_con(txt, bigint_as_char): lexical error: invalid char in json text.
-                                       <br /> <b>Fatal error</b>:  Unc
-                     (right here) ------^
+```{.output}
+
+ -------------- 
+the catfact api is down :( 
+ --------------
+    \
+      \
+        \
+            |\___/|
+          ==) ^Y^ (==
+            \  ^  /
+             )=*=(
+            /     \
+            |     |
+           /| | | |\
+           \| | |_|/\
+      jgs  //_// ___/
+               \_)
+  
 ```
 
 ### Try it yourself!
@@ -179,11 +193,9 @@ sessioninfo::session_info()
  P cli           3.0.1      2021-07-17 [?] CRAN (R 4.1.0)       
  P cowsay      * 0.8.0      2020-02-06 [?] CRAN (R 4.1.0)       
  P crayon        1.4.1      2021-02-08 [?] CRAN (R 4.1.0)       
- P curl        * 4.3.2      2021-06-23 [?] CRAN (R 4.1.0)       
  P evaluate      0.14       2019-05-28 [?] CRAN (R 4.1.0)       
  P fortunes      1.5-4      2016-12-29 [?] CRAN (R 4.1.0)       
  P highr         0.9        2021-04-16 [?] CRAN (R 4.1.0)       
- P jsonlite      1.7.2      2020-12-09 [?] CRAN (R 4.1.0)       
  P knitr         1.34       2021-09-09 [?] CRAN (R 4.1.0)       
  P magrittr      2.0.1      2020-11-17 [?] CRAN (R 4.1.0)       
  R processx      3.5.2      <NA>       [?] <NA>                 
@@ -191,7 +203,7 @@ sessioninfo::session_info()
  P R6            2.5.1      2021-08-19 [?] CRAN (R 4.1.0)       
  P renv          0.14.0     2021-07-21 [?] CRAN (R 4.1.0)       
  P rmsfact       0.0.3      2016-08-04 [?] CRAN (R 4.1.0)       
- R sandpaper     0.0.0.9054 <NA>       [?] <NA>                 
+ R sandpaper     0.0.0.9055 <NA>       [?] <NA>                 
  P sessioninfo   1.1.1      2018-11-05 [?] CRAN (R 4.1.0)       
  P stringi       1.7.4.9001 2021-09-24 [?] repository (@7248cae)
  P stringr       1.4.0      2019-02-10 [?] CRAN (R 4.1.0)       
@@ -199,7 +211,7 @@ sessioninfo::session_info()
  P xfun          0.26       2021-09-14 [?] CRAN (R 4.1.0)       
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/lesson-requirements/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpzkbp45/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpJTFBgM/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
