@@ -34,14 +34,15 @@ shown below.
 
 
 ```r
+library("curl")
 library("cowsay")
-say("the catfact api is down :(", "cat")
+say("catfact", "cat")
 ```
 
 ```{.output}
 
  -------------- 
-the catfact api is down :( 
+In one stride, a cheetah can cover 23 to 26 feet (7 to 8 meters). 
  --------------
     \
       \
@@ -193,9 +194,11 @@ sessioninfo::session_info()
  P cli           3.0.1      2021-07-17 [?] CRAN (R 4.1.0)       
  P cowsay      * 0.8.0      2020-02-06 [?] CRAN (R 4.1.0)       
  P crayon        1.4.1      2021-02-08 [?] CRAN (R 4.1.0)       
+ P curl        * 4.3.2      2021-06-23 [?] CRAN (R 4.1.0)       
  P evaluate      0.14       2019-05-28 [?] CRAN (R 4.1.0)       
  P fortunes      1.5-4      2016-12-29 [?] CRAN (R 4.1.0)       
  P highr         0.9        2021-04-16 [?] CRAN (R 4.1.0)       
+ P jsonlite      1.7.2      2020-12-09 [?] CRAN (R 4.1.0)       
  P knitr         1.34       2021-09-09 [?] CRAN (R 4.1.0)       
  P magrittr      2.0.1      2020-11-17 [?] CRAN (R 4.1.0)       
  R processx      3.5.2      <NA>       [?] <NA>                 
@@ -211,7 +214,7 @@ sessioninfo::session_info()
  P xfun          0.26       2021-09-14 [?] CRAN (R 4.1.0)       
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/lesson-requirements/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpJTFBgM/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpE2JgzZ/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
