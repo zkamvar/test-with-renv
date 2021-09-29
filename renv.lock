@@ -192,13 +192,6 @@
       "Repository": "CRAN",
       "Hash": "e75525c55c70e5f4f78c9960a4b402e9"
     },
-    "curl": {
-      "Package": "curl",
-      "Version": "4.3.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "022c42d49c28e95d69ca60446dbabf88"
-    },
     "deldir": {
       "Package": "deldir",
       "Version": "0.2-10",
@@ -673,10 +666,11 @@
       "Version": "1.7.4.9001",
       "Source": "Repository",
       "Repository": "https://carpentries.r-universe.dev",
+      "RemoteType": "repository",
       "RemoteUrl": "https://github.com/gagolews/stringi",
       "RemoteRef": "HEAD",
       "RemoteSha": "7248caeebc7d442ec38187240091a71ed76c536e",
-      "Hash": "a5f27f824f0ae3b166413288eea47637"
+      "Hash": "b1953eba34c51e240d71dc68265a4636"
     },
     "stringr": {
       "Package": "stringr",
