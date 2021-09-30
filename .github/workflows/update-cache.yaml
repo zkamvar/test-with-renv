@@ -69,6 +69,9 @@ jobs:
       RENV_PATHS_ROOT: ~/Library/Application Support/renv
     steps:
 
+      - name: "Checkout Lesson"
+        uses: actions/checkout@v2
+
       - name: "Check if renv dir exists"
         id: check
         run: |
