@@ -18,7 +18,10 @@ jobs:
     outputs:
       needed: ${{ steps.renv.outputs.exists }}
     steps:
-      - id: renv
+      - name: "Checkout Lesson"
+        uses: actions/checkout@v2
+      - name: "Check for renv folder"
+        id: renv
         run: |
           if [[ -d renv ]]; then
             echo "::set-output name=exists::true"
@@ -66,9 +69,6 @@ jobs:
       RENV_PATHS_ROOT: ~/Library/Application Support/renv
     steps:
 
-      - name: "Checkout Lesson"
-        uses: actions/checkout@v2
-      
       - name: "Check if renv dir exists"
         id: check
         run: |
