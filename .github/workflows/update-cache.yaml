@@ -13,7 +13,7 @@ on:
 
 jobs:
   check_date:
-    name: "Check the day"
+    name: "Check The Day"
     runs-on: ubuntu-latest
     outputs:
       ok: ${{ steps.check.outputs.ok }}
@@ -79,7 +79,7 @@ jobs:
     name: "Update Package Cache"
     needs: check_token
     if: ${{ needs.check_token.outputs.repo== 'true' }}
-    runs-on: macOS-latest
+    runs-on: macOS-11
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       RENV_PATHS_ROOT: ~/Library/Application Support/renv
