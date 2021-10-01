@@ -14,7 +14,7 @@ on:
 jobs:
   check_date:
     name: "Check the day"
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     outputs:
       ok: ${{ steps.check.outputs.ok }}
     steps:
