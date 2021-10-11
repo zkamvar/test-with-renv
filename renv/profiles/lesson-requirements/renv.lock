@@ -670,14 +670,8 @@
     },
     "stringi": {
       "Package": "stringi",
-      "Version": "1.7.4.9001",
-      "Source": "Repository",
-      "Repository": "https://carpentries.r-universe.dev",
-      "RemoteType": "repository",
-      "RemoteUrl": "https://github.com/gagolews/stringi",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "7248caeebc7d442ec38187240091a71ed76c536e",
-      "Hash": "b1953eba34c51e240d71dc68265a4636"
+      "Version": "1.7.5",
+      "Source": "Repository"
     },
     "stringr": {
       "Package": "stringr",
