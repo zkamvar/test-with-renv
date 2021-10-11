@@ -433,8 +433,14 @@
     "mime": {
       "Package": "mime",
       "Version": "0.12",
-      "Source": "Repository",
+      "Source": "CRAN",
       "Repository": "CRAN",
+      "RemoteType": "standard",
+      "RemotePkgRef": "mime",
+      "RemoteRef": "mime",
+      "RemoteRepos": "https://cran.rstudio.com",
+      "RemotePkgPlatform": "source",
+      "RemoteSha": "0.12",
       "Hash": "18e9c28c1d3ca1560ce30658b22ce104"
     },
     "munsell": {
@@ -671,7 +677,12 @@
     "stringi": {
       "Package": "stringi",
       "Version": "1.7.5",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "https://carpentries.r-universe.dev",
+      "RemoteUrl": "https://github.com/gagolews/stringi",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "dfc45538a25f2379e70d6c15aa44df644d2bb4e1",
+      "Hash": "cd50dc9b449de3d3b47cdc9976886999"
     },
     "stringr": {
       "Package": "stringr",
@@ -697,8 +708,14 @@
     "tinytex": {
       "Package": "tinytex",
       "Version": "0.34",
-      "Source": "Repository",
+      "Source": "CRAN",
       "Repository": "CRAN",
+      "RemoteType": "standard",
+      "RemotePkgRef": "tinytex",
+      "RemoteRef": "tinytex",
+      "RemoteRepos": "https://cran.rstudio.com",
+      "RemotePkgPlatform": "source",
+      "RemoteSha": "0.34",
       "Hash": "043daa786f4d254f0031534150e28d42"
     },
     "units": {
