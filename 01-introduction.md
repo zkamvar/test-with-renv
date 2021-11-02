@@ -176,7 +176,7 @@ sessioninfo::session_info()
 ```{.output}
 ─ Session info ───────────────────────────────────────────────────────────────────────────────────
  setting  value                       
- version  R version 4.1.1 (2021-08-10)
+ version  R version 4.1.2 (2021-11-01)
  os       macOS Big Sur 10.16         
  system   x86_64, darwin17.0          
  ui       X11                         
@@ -184,7 +184,7 @@ sessioninfo::session_info()
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       UTC                         
- date     2021-10-11                  
+ date     2021-11-02                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
  ! package     * version    date       lib source                                      
@@ -196,22 +196,22 @@ sessioninfo::session_info()
  P evaluate      0.14       2019-05-28 [?] CRAN (R 4.1.0)                              
  P fortunes      1.5-4      2016-12-29 [?] CRAN (R 4.1.0)                              
  P highr         0.9        2021-04-16 [?] CRAN (R 4.1.0)                              
- P knitr         1.36       2021-09-29 [?] CRAN (R 4.1.1)                              
+ P knitr         1.36       2021-09-29 [?] CRAN (R 4.1.0)                              
  P magrittr      2.0.1      2020-11-17 [?] CRAN (R 4.1.0)                              
  R processx      3.5.2      <NA>       [?] <NA>                                        
  R ps            1.6.0      <NA>       [?] <NA>                                        
  P R6            2.5.1      2021-08-19 [?] CRAN (R 4.1.0)                              
  P renv          0.14.0     2021-07-21 [?] CRAN (R 4.1.0)                              
  P rmsfact       0.0.3      2016-08-04 [?] CRAN (R 4.1.0)                              
- R sandpaper     0.0.0.9059 <NA>       [?] <NA>                                        
+ R sandpaper     0.0.0.9066 <NA>       [?] <NA>                                        
  P sessioninfo   1.1.1      2018-11-05 [?] CRAN (R 4.1.0)                              
  P stringi       1.7.5      2021-10-04 [?] https://carpentries.r-universe.dev (R 4.1.1)
  P stringr       1.4.0      2019-02-10 [?] CRAN (R 4.1.0)                              
  P withr         2.4.2      2021-04-18 [?] CRAN (R 4.1.0)                              
- P xfun          0.26       2021-09-14 [?] CRAN (R 4.1.0)                              
+ P xfun          0.26       2021-09-14 [?] CRAN (R 4.1.2)                              
 
 [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/lesson-requirements/renv/library/R-4.1/x86_64-apple-darwin17.0
-[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpP6ajoJ/renv-system-library
+[2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmptAPTcO/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
