@@ -34,7 +34,8 @@ shown below.
 
 ```{r wisdom, message = FALSE}
 library("cowsay")
-say("the catfact api is down :(", "cat")
+library("curl")
+say("catfact")
 ```
 
 ### Try it yourself!
