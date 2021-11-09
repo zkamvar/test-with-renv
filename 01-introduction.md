@@ -35,13 +35,14 @@ shown below.
 
 ```r
 library("cowsay")
-say("the catfact api is down :(", "cat")
+library("curl")
+say("catfact")
 ```
 
 ```{.output}
 
  -------------- 
-the catfact api is down :( 
+In 1987 cats overtook dogs as the number one pet in America. 
  --------------
     \
       \
@@ -174,8 +175,8 @@ sessioninfo::session_info()
 ```
 
 ```{.output}
-─ Session info  🖐🏻  👌  🤕   ────────────────────────────────────────────────────────────────────
- hash: hand with fingers splayed: light skin tone, OK hand, face with head-bandage
+─ Session info  👨‍🎨  🥫  📗   ─────────────────────────────────────────────────────────────────────
+ hash: man artist, canned food, green book
 
  setting  value
  version  R version 4.1.2 (2021-11-01)
@@ -186,7 +187,7 @@ sessioninfo::session_info()
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       UTC
- date     2021-11-02
+ date     2021-11-09
  pandoc   2.11.4 @ /usr/local/bin/pandoc
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
@@ -196,9 +197,11 @@ sessioninfo::session_info()
  P cli           3.1.0      2021-10-27 [?] CRAN (R 4.1.0)
  P cowsay      * 0.8.0      2020-02-06 [?] CRAN (R 4.1.0)
  P crayon        1.4.2      2021-10-29 [?] CRAN (R 4.1.0)
+ P curl        * 4.3.2      2021-06-23 [?] CRAN (R 4.1.0)
  P evaluate      0.14       2019-05-28 [?] CRAN (R 4.1.0)
  P fortunes      1.5-4      2016-12-29 [?] CRAN (R 4.1.0)
  P highr         0.9        2021-04-16 [?] CRAN (R 4.1.0)
+ P jsonlite      1.7.2      2020-12-09 [?] CRAN (R 4.1.0)
  P knitr         1.36       2021-09-29 [?] CRAN (R 4.1.0)
  P magrittr      2.0.1      2020-11-17 [?] CRAN (R 4.1.0)
  R processx      3.5.2      <NA>       [?] <NA>
@@ -213,7 +216,7 @@ sessioninfo::session_info()
  P xfun          0.27       2021-10-18 [?] CRAN (R 4.1.0)
 
  [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/lesson-requirements/renv/library/R-4.1/x86_64-apple-darwin17.0
- [2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpyK3tBD/renv-system-library
+ [2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpT7mUsB/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
