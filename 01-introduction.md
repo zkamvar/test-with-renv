@@ -42,7 +42,7 @@ say("catfact")
 ```{.output}
 
  -------------- 
-In 1987 cats overtook dogs as the number one pet in America. 
+Cats don’t have sweat glands over their bodies like humans do. Instead, they sweat only through their paws. 
  --------------
     \
       \
@@ -175,8 +175,8 @@ sessioninfo::session_info()
 ```
 
 ```{.output}
-─ Session info  👨‍🎨  🥫  📗   ─────────────────────────────────────────────────────────────────────
- hash: man artist, canned food, green book
+─ Session info  🥨  🍧  ♑   ─────────────────────────────────────────────────────────────────────
+ hash: pretzel, shaved ice, Capricorn
 
  setting  value
  version  R version 4.1.2 (2021-11-01)
@@ -187,7 +187,7 @@ sessioninfo::session_info()
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       UTC
- date     2021-11-09
+ date     2021-11-16
  pandoc   2.11.4 @ /usr/local/bin/pandoc
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
@@ -209,14 +209,14 @@ sessioninfo::session_info()
  P R6            2.5.1      2021-08-19 [?] CRAN (R 4.1.0)
  P renv          0.14.0     2021-07-21 [?] CRAN (R 4.1.0)
  P rmsfact       0.0.3      2016-08-04 [?] CRAN (R 4.1.0)
- R sandpaper     0.0.0.9066 <NA>       [?] <NA>
+ R sandpaper     0.0.0.9067 <NA>       [?] <NA>
  P sessioninfo   1.2.0      2021-10-31 [?] CRAN (R 4.1.0)
  P stringi       1.7.5      2021-10-04 [?] repository (https://github.com/gagolews/stringi@dfc4553)
  P stringr       1.4.0      2019-02-10 [?] CRAN (R 4.1.0)
  P xfun          0.27       2021-10-18 [?] CRAN (R 4.1.0)
 
  [1] /Users/runner/work/test-with-renv/test-with-renv/renv/profiles/lesson-requirements/renv/library/R-4.1/x86_64-apple-darwin17.0
- [2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpT7mUsB/renv-system-library
+ [2] /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmp3tFH0a/renv-system-library
 
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
