@@ -42,7 +42,7 @@ say("catfact")
 ```{.output}
 
  -------------- 
-Cats bury their feces to cover their trails from predators. 
+Cats' hearing is much more sensitive than humans and dogs. 
  --------------
     \
       \
@@ -176,7 +176,7 @@ sessioninfo::session_info()
 
 ```{.output}
 ─ Session info  ──────────────────────────────────────────────────────────────────────────────────
- hash: black medium-small square, backhand index pointing up: dark skin tone, double curly loop
+ hash: fleur-de-lis, flag: Austria, flag: England
 
  setting  value
  version  R version 4.1.2 (2021-11-01)
@@ -187,37 +187,38 @@ sessioninfo::session_info()
  collate  C.UTF-8
  ctype    C.UTF-8
  tz       UTC
- date     2021-11-20
+ date     2022-01-18
  pandoc   2.11.4 @ /usr/bin/pandoc
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────
- ! package     * version    date (UTC) lib source
- R assertthat    0.2.1      <NA>       [?] <NA>
- R callr         3.7.0      <NA>       [?] <NA>
- P cli           3.1.0      2021-10-27 [?] Custom
- P cowsay      * 0.8.0      2020-02-06 [?] Custom
- P crayon        1.4.2      2021-10-29 [?] Custom
- P curl        * 4.3.2      2021-06-23 [?] RSPM (R 4.1.0)
- P evaluate      0.14       2019-05-28 [?] Custom
- P fortunes      1.5-4      2016-12-29 [?] Custom
- P highr         0.9        2021-04-16 [?] Custom
- P jsonlite      1.7.2      2020-12-09 [?] Custom
- P knitr         1.36       2021-09-29 [?] Custom
- P magrittr      2.0.1      2020-11-17 [?] Custom
- R processx      3.5.2      <NA>       [?] <NA>
- R ps            1.6.0      <NA>       [?] <NA>
- P R6            2.5.1      2021-08-19 [?] Custom
- P renv          0.14.0     2021-07-21 [?] CRAN (R 4.1.2)
- P rmsfact       0.0.3      2016-08-04 [?] Custom
- R sandpaper     0.0.0.9068 <NA>       [?] <NA>
- P sessioninfo   1.2.0      2021-10-31 [?] CRAN (R 4.1.2)
- P stringi       1.7.5      2021-11-20 [?] repository (https://github.com/gagolews/stringi@dfc4553)
- P stringr       1.4.0      2019-02-10 [?] Custom
- P xfun          0.27       2021-10-18 [?] CRAN (R 4.1.2)
+ !  package     * version    date (UTC) lib source
+ R  assertthat    0.2.1      <NA>       [?] <NA>
+ R  callr         3.7.0      <NA>       [?] <NA>
+ P  cli           3.1.0      2021-10-27 [?] Custom
+ P  cowsay      * 0.8.0      2020-02-06 [?] Custom
+ P  crayon        1.4.2      2021-10-29 [?] Custom
+ P  curl        * 4.3.2      2021-06-23 [?] RSPM (R 4.1.0)
+ P  evaluate      0.14       2019-05-28 [?] Custom
+ P  fortunes      1.5-4      2016-12-29 [?] Custom
+ P  highr         0.9        2021-04-16 [?] Custom
+ P  jsonlite      1.7.2      2020-12-09 [?] Custom
+ P  knitr         1.36       2021-09-29 [?] Custom
+ P  magrittr      2.0.1      2020-11-17 [?] Custom
+ R  processx      3.5.2      <NA>       [?] <NA>
+ R  ps            1.6.0      <NA>       [?] <NA>
+ P  R6            2.5.1      2021-08-19 [?] Custom
+ VP renv          0.15.1     2021-07-21 [?] CRAN (R 4.1.2) (on disk 0.14.0)
+ P  rmsfact       0.0.3      2016-08-04 [?] Custom
+ R  sandpaper     0.0.0.9073 <NA>       [?] <NA>
+ P  sessioninfo   1.2.0      2021-10-31 [?] CRAN (R 4.1.2)
+ P  stringi       1.7.5      2021-11-20 [?] repository (https://github.com/gagolews/stringi@dfc4553)
+ P  stringr       1.4.0      2019-02-10 [?] Custom
+ P  xfun          0.27       2021-10-18 [?] CRAN (R 4.1.2)
 
  [1] /home/runner/work/test-with-renv/test-with-renv/renv/profiles/lesson-requirements/renv/library/R-4.1/x86_64-pc-linux-gnu
- [2] /tmp/RtmpFsgoYl/renv-system-library
+ [2] /opt/R/4.1.2/lib/R/library
 
+ V ── Loaded and on-disk version mismatch.
  P ── Loaded and on-disk path mismatch.
  R ── Package was removed from disk.
 
