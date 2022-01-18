@@ -8,4 +8,4 @@
 "instructors/instructor-notes.md" "60b93493cf1da06dfd63255d73854461" "site/built/instructor-notes.md"
 "learners/Setup.md" "0e4e4d7028efbf7d756a08217126884f" "site/built/Setup.md"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md"
-"renv/profiles/lesson-requirements/renv.lock" "8a1aa91598ae3da3ea63e84a1810a8a4" "site/built/renv.lock"
+"renv/profiles/lesson-requirements/renv.lock" "c0aca2cdf26e0c52e6bb83ed2ff36319" "site/built/renv.lock"
